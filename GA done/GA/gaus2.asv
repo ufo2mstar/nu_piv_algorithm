@@ -1,0 +1,15 @@
+A = 1;
+x0 = 0; y0 = 0;
+ 
+sigma_x = 1;
+sigma_y = 2;
+%  
+% for x = 0:pi/100:pi
+	
+    [X, Y] = meshgrid(-5:.1:5, -5:.1:5);
+    Z = A*exp( - ((X-x0).^2)/ 2*sigma_x^2 + ((Y-y0).^2)/ 2*sigma_y^2);
+    surf(X,Y,Z);
+% 	shading interp;
+	view(-36,36);axis equal;
+% 	drawnow
+% end
